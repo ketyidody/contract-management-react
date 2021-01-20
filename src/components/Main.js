@@ -5,6 +5,7 @@ import RentalObjectIndex from './RentalObject/RentalObjectIndex';
 import RentalObjShow from './RentalObject/RentalObjShow';
 import ContractShow from './Contract/ContractShow';
 import ContractIndex from "./Contract/ContractIndex";
+import Home from "./Home"
 import {
     Switch,
     Route,
@@ -15,6 +16,7 @@ class Main extends Component {
         return (
             <main className="container">
                 <Switch>
+                    <Route exact path="/" component={Home} />
                     <Route exact path="/person" component={PersonIndex} />
                     <Route path="/person/:handle" component={PersonShow} />
                     <Route exact path="/rental-object" component={RentalObjectIndex} />

@@ -68,9 +68,9 @@ class PersonShow extends Component {
                             <tr>
                                 <th>Contracts</th>
                                 <td>
-                                    {item.contract_ids.map((contract_id) => (
+                                    {Object.entries(item.contract_ids).map((contract) => (
                                         <p>
-                                            <Link to={"/contract/" + contract_id} >Contract #{contract_id}</Link>
+                                            <Link to={"/contract/" + contract[0]} >{contract[1]}</Link>
                                         </p>
                                     ))}
                                 </td>
