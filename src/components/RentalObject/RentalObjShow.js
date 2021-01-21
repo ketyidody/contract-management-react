@@ -83,7 +83,9 @@ class RentalObjShow extends Component {
                             <th>Contract</th>
                             <td>
                                 {Object.entries(item.contract_ids).map(contract => (
-                                    <Link to={"/contract/" + contract[0]}>{contract[1]}</Link>
+                                    <p>
+                                        <Link to={"/contract/" + contract[0]}>{contract[1]}</Link>
+                                    </p>
                                 ))}
                             </td>
                         </tr>
